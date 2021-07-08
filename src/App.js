@@ -16,6 +16,7 @@ class App extends React.Component {
       currentUser: null
     }
   }
+
   unsubscribeFromAuth = null
 
   componentDidMount() {
@@ -38,7 +39,6 @@ class App extends React.Component {
       }
     })
   }
-
 
   componentWillUnmount() {
     this.unsubscribeFromAuth()
@@ -63,7 +63,6 @@ class App extends React.Component {
       </div>
     );
   }
-
 }
 
 export default App;
