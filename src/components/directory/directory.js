@@ -13,7 +13,7 @@ class Directory extends React.Component {
               imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
               id: 1,
               linkUrl: 'hats',
-              bg: '/static/media/boxing.8c7dcad6.jpg',
+              bg: 'cap',
             },
             {
               title: 'jackets',
@@ -26,7 +26,7 @@ class Directory extends React.Component {
               imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
               id: 3,
               linkUrl: 'shop/sneakers',
-              bg: "/static/media/boots.26b652d3.jpg"
+              bg: "sneaker"
             },
             {
               title: 'womens',
@@ -37,7 +37,7 @@ class Directory extends React.Component {
             },
             {
               title: 'mens',
-              bg: "/static/media/elizeu-dias.882afaa4.jpg",
+              bg: "men",
               imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
               size: 'large',
               id: 5,
