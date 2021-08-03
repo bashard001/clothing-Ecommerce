@@ -3,5 +3,11 @@
     display: flex;
     justify-content: space-between;
     margin: 30px auto;
+
+
+    .line{
+      border-left: solid salmon;
+      border-width: 2px;
+    }
   }
   

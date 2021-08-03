@@ -9,7 +9,7 @@
     background-color: white;
     top: 90px;
     right: 40px;
-    z-index: 5;
+    z-index: 10;
     border-radius: 20px;
 
     .empty-message {
@@ -27,5 +27,12 @@
     button {
       margin-top: auto;
     }
+  }
+  .dropShade{
+    position: absolute;
+    z-index: 4;
+    width: 100vw;
+    height: 100vh;
+    
   }
   

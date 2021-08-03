@@ -12,24 +12,30 @@ import { toggleCartHidden } from "../../redux/cart/cart.actions";
 
 import "./cart-dropdown.scss"
 
-const CartDropdown = ({ cartItems, history, dispatch }) => (
-    <div className="cart-dropdown">
-        <div className="cart-items">
-            {
-                cartItems.length ?
-                    (cartItems.map(cartItem => <CartItem key={cartItem.id} item={cartItem} />))
-                    : <span className="empty-message">Your cart is empty</span>
-            }
-        </div>
-        <CustomButton onClick={() => {
-            history.push("/checkout");
-            dispatch(toggleCartHidden())
+const CartDropdown = ({ cartItems, history, dispatch, toggleCartHidden}) => (
+    <div className="dropShade" onClick={toggleCartHidden}>
+        <div className="cart-dropdown" onClick={(e)=>{
+            e.stopPropagation()
+        }}>
+            <div className="cart-items">
+                {
+                    cartItems.length ?
+                        (cartItems.map(cartItem => <CartItem key={cartItem.id} item={cartItem} />))
+                        : <span className="empty-message">Your cart is empty</span>
+                }
+            </div>
+            <CustomButton onClick={() => {
+                history.push("/checkout");
+                dispatch(toggleCartHidden())
             }}>GO TO CHECKOUT</CustomButton>
-    </div>
+        </div>
+        </div>
 )
-
+const mapDispatchToProps = dispatch => ({
+    toggleCartHidden: () => dispatch(toggleCartHidden())
+})
 const mapStateToProps = (state) => ({
     cartItems: selectCartItems(state)
 })
 
-export default withRouter(connect(mapStateToProps)(CartDropdown)) 
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(CartDropdown))
