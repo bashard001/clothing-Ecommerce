@@ -59,6 +59,7 @@ class App extends React.Component {
              (<Redirect to="/" />) : (<SignInSignOutPage/>)}  />
 
         </Switch>
+        
       </div>
     );
   }
