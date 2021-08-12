@@ -9,6 +9,7 @@ import React from 'react';
 import { connect } from "react-redux";
 import { setCurrentUser } from "./redux/user/user.actions";
 import CheckoutPage from './pages/checkout/checkout';
+import Footer from './components/footer/footer';
 
 
 class App extends React.Component {
@@ -59,7 +60,8 @@ class App extends React.Component {
              (<Redirect to="/" />) : (<SignInSignOutPage/>)}  />
 
         </Switch>
-        
+        <Footer />
+
       </div>
     );
   }
