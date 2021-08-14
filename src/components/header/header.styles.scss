@@ -1,34 +1,31 @@
 .header {
-  position: relative;
-    height: 70px;
+  position: sticky;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 25px;
-    padding: 15px 0px 0px;
-    z-index: 2;
+    padding: 15px 15px 8px 15px;
+    z-index: 100;
+    vertical-align: middle;
+    border-bottom: .8px solid rgb(165, 165, 165);
+    top: 0;
+    background-color: white;
     
     .logo-container {
       height: 100%;
-      width: 70px;
-      padding: 5px 15px 12px;
-      margin-left: 40px;
-   
+      width: 70px; 
+      margin-left: 50px;
     }
- 
-    .logo{
+    .logo{ 
       height: 65px;
       width: 74px;
-   
-    color: rgb(172, 92, 83);
   }
     .options {
-      width: 50%;
+      display: inline-block;
       height: 100%;
       display: flex;
       align-items: center;
-      justify-content: flex-end;
-      
+     justify-content: end;
+      padding-top: 10px;
   
       .option {
         padding: 10px 15px;
