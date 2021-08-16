@@ -1,19 +1,14 @@
 import React from "react"
-
-
+import CollectionOverview from "../../components/collections-overview/collections-overview"
 import "./shop-page.style.css"
 
-import CollectionPreview from "../../components/preview-collection/preview-collection"
+
 
 const ShopPage =  () => {
-
-    
- 
         
         return (<div className="shop-page">
-           
+           <CollectionOverview />
         </div>)
-
     }
 
 
