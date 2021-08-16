@@ -8,6 +8,7 @@
     border: 1px solid black;
     margin: 0 7.5px 15px;
    overflow: hidden;
+   border-radius: 2px;
 
     &.large {
         height: 400px;
@@ -23,6 +24,8 @@
 
     &:hover {
         cursor: pointer;
+        border: 1px solid #E50051;
+
 
         & .background-image{
             transform: scale(1.1);
@@ -30,7 +33,9 @@
         }
         & .content{
             opacity: 0.9;
+            
         }
+        
     }
   
     .background-image{
