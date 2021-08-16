@@ -5,7 +5,7 @@ import { selectCollection } from "../../redux/shop/shop.selectors"
 import "./collection.styles.scss"
 
 
-const CollectionPage = (collection) => {
+const CollectionPage = ({collection}) => {
     
     console.log(collection)
 
