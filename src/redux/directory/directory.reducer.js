@@ -1,5 +1,21 @@
 const INITIAL_STATE =
 { sections: [
+  
+    {
+      title: 'womens',
+      imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
+      size: 'large',
+      id: 4,
+      linkUrl: 'shop/womens'
+    },
+    {
+      title: 'mens',
+      bg: "men",
+      imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
+      size: 'large',
+      id: 5,
+      linkUrl: 'shop/mens'
+    },
     {
       title: 'hats',
       imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
@@ -19,21 +35,6 @@ const INITIAL_STATE =
       id: 3,
       linkUrl: 'shop/sneakers',
       bg: "sneaker"
-    },
-    {
-      title: 'womens',
-      imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
-      size: 'large',
-      id: 4,
-      linkUrl: 'shop/womens'
-    },
-    {
-      title: 'mens',
-      bg: "men",
-      imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
-      size: 'large',
-      id: 5,
-      linkUrl: 'shop/mens'
     }
   ]}
 
