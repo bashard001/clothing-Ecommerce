@@ -3,6 +3,7 @@ const INITIAL_STATE =
   
     {
       title: 'womens',
+      bg: "women",
       imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
       size: 'large',
       id: 4,
