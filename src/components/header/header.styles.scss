@@ -1,40 +1,37 @@
 .header {
   position: sticky;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 15px 8px 15px;
-    z-index: 100;
-    vertical-align: middle;
-    border-bottom: .8px solid rgb(165, 165, 165);
-    top: 0;
-    background-color: white;
-    
-    .logo-container {
-      height: 100%;
-      width: 70px; 
-      margin-left: 50px;
-    }
-    .logo{ 
-      height: 65px;
-      width: 74px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 15px 8px 15px;
+  z-index: 100;
+  vertical-align: middle;
+  border-bottom: 0.8px solid rgb(165, 165, 165);
+  top: 0;
+  background-color: white;
+
+  .logo-container {
+    height: 100%;
+    width: 70px;
+    margin-left: 50px;
   }
-    .options {
-      display: inline-block;
-      height: 100%;
-      display: flex;
-      align-items: center;
-     justify-content: end;
-      padding-top: 10px;
-  
-      .option {
-        padding: 10px 15px;
-        cursor: pointer;
-      }
-      .option:hover{
-        color: #E50051 ;
-      }
+  .logo {
+    height: 65px;
+    width: 74px;
+  }
+  .options {
+    display: inline-block;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+
+    .option {
+      padding: 10px 15px;
+      cursor: pointer;
     }
-  } 
-  
-  
+    .option:hover {
+      color: #e50051;
+    }
+  }
+}
