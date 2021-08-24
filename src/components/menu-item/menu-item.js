@@ -14,6 +14,7 @@ const MenuItem = ({ title, imageUrl, size, linkUrl, history, match, bg }) => {
         case "men": image = Images.men
             break
             case "women": image = Images.women
+            break
         default:
             break;
     }
