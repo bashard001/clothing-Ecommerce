@@ -1,14 +1,21 @@
 import React from "react"
-import"./sign-in-popup.styles.scss"
+import "./sign-in-popup.styles.scss"
 import SignIn from "../sign-in/sign-in"
+import { setAsGuest } from "../../redux/user/user.actions"
+import { connect } from "react-redux"
 
-
-const SignInPopup = ()=>(
+const SignInPopup = ({setAsGuest}) => (
     <div className="popup">
         <div className="popupCard">
-<SignIn />
+            <SignIn />
+            <div className="guest">continue as a <p style={{display:"inline"}} onClick={()=> setAsGuest()}>guest</p> </div>
         </div>
     </div>
 )
 
-export default SignInPopup
+const mapDispatchToProps = dispatch => {
+    return {
+    setAsGuest: () => dispatch(setAsGuest())
+}}
+
+export default connect(null, mapDispatchToProps)(SignInPopup)

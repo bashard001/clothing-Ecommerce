@@ -4,9 +4,8 @@ export const setCurrentUser = user => ({
     payload: user
 })
 
-export const setAsGuest = user => (
+export const setAsGuest = () => (
     {
-        type: UserActionTypes.IS_GUEST,
-        payload: user
+        type: UserActionTypes.SET_AS_GUEST
     }
 )

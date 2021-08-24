@@ -12,7 +12,7 @@ import { toggleCartHidden } from "../../redux/cart/cart.actions";
 
 import "./cart-dropdown.scss"
 
-const CartDropdown = ({ cartItems, history, dispatch, toggleCartHidden}) => (
+const CartDropdown = ({ cartItems, history, toggleCartHidden}) => (
     <div className="dropShade" onClick={toggleCartHidden}>
         <div className="cart-dropdown" onClick={(e)=>{
             e.stopPropagation()

@@ -1,6 +1,7 @@
 import { UserActionTypes } from "./user.types";
 const INITIAL_STATE = {
-    currentUser: null
+    currentUser: null,
+    isGuest: false
 }
 
 const userReducer = (state = INITIAL_STATE, action) => {
@@ -10,10 +11,11 @@ switch(action.type){
             ...state, 
             currentUser: action.payload
         }
-        case UserActionTypes.IS_GUEST:
+
+        case UserActionTypes.SET_AS_GUEST:
             return{
                 ...state,
-                isGuest: action.payload
+                isGuest: state.isGuest = true
             }
 
     default:
