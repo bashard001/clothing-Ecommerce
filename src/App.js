@@ -22,7 +22,6 @@ class App extends React.Component {
     const { setCurrentUser } = this.props
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
       if (userAuth) {
-     
         const userRef = await createUserProfileDocument(userAuth);
         userRef.onSnapshot(snapShot => {
           setCurrentUser({
@@ -34,6 +33,7 @@ class App extends React.Component {
         })
         console.log(this.state)
       } else {
+        console.log("hello")
         setCurrentUser(userAuth)
       }
     })
@@ -46,7 +46,10 @@ class App extends React.Component {
   render() {
     return (
       <div >
-        <SignInPopup />
+        {
+         this.props.currentUser ? (<Redirect to="/" />) : <SignInPopup />
+        }
+        
         <Header />
         <Switch>
           <Route path="/" exact>
@@ -70,7 +73,8 @@ class App extends React.Component {
 }
 
 const mapStateToProps = ({user})=>({
-  currentUser: user.currentUser
+  currentUser: user.currentUser,
+  isGuest: user.isGuest
 })
 const mapDispatchToProps = dispatch => ({
 setCurrentUser: user => dispatch(setCurrentUser(user))
