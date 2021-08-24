@@ -1,18 +1,14 @@
-.footer{
-    display: flex;
-    bottom: 0;
-  color:#ddd;
-  background: linear-gradient(to right,#E50051 25%, #3a49ee);
- min-height: 10vh;
-  align-items: center; 
+.footer {
+  display: flex;
+  bottom: 0;
+  color: #ddd;
+  background: linear-gradient(to right, #e50051 25%, #3a49ee);
+  min-height: 10vh;
+  align-items: center;
   justify-content: center;
-  
-
 }
 
 .footer p {
-    
-        display: block;
-        margin: auto;
-    
+  display: block;
+  margin: auto;
 }
