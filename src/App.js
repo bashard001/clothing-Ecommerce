@@ -10,6 +10,7 @@ import { connect } from "react-redux";
 import { setCurrentUser } from "./redux/user/user.actions";
 import CheckoutPage from './pages/checkout/checkout';
 import Footer from './components/footer/footer';
+import SignInPopup from './components/sign-in-popup/sign-in-popup';
 
 
 class App extends React.Component {
@@ -45,9 +46,11 @@ class App extends React.Component {
   render() {
     return (
       <div >
+        <SignInPopup />
         <Header />
         <Switch>
           <Route path="/" exact>
+            
             <HomePage  />
           </Route>
 
