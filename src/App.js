@@ -44,11 +44,20 @@ class App extends React.Component {
     setAsGuest()
   }
 
+  // shouldComponentUpdate(nextProps){
+  //   if (nextProps.isGuest !== this.props.isGuest){
+  //     return true
+  //   } else {
+  //     return false
+  //   }
+  // }
+
   render() {
     return (
       <div >
         {
-         !this.props.isGuest ? (<Redirect to="/" />) : <SignInPopup />
+        this.props.isGuest ? (<Redirect to="/" />) : <SignInPopup />
+       
         }
         
         <Header />
