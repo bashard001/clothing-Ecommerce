@@ -1,24 +1,29 @@
-import React from "react"
+import React, {useEffect} from "react"
 import "./sign-in-popup.styles.scss"
 import SignIn from "../sign-in/sign-in"
 import { setAsGuest } from "../../redux/user/user.actions"
 import { connect } from "react-redux"
 
-const SignInPopup = ({ setAsGuest , currentUser}) => {
+const SignInPopup = ({setAsGuest, isUser, currentUser}) => {
 
     function timeFunc() {
-        if (!currentUser) {
-            setTimeout(() => {
-       console.log(currentUser)
-                document.querySelector(".popup").style.display = "flex";
-            }, 4000);
+        console.log(isUser)
+        // props.setAsGuest()
+       
+        if(currentUser && document.querySelector(".popup") !== null){
+            console.log("account login")
+            document.querySelector(".popup").style.display = "none"
+        }else{
+         setTimeout(()=>{ 
+        document.querySelector(".popup").style.display = "flex"
+       },3000)
         }
-        else {
-            console.log("guest access")
-        }
-
+    
     }
-    timeFunc()
+           
+    useEffect(()=>{
+         timeFunc()
+    },[currentUser])
 
     return (
         <div className="popup">
@@ -30,9 +35,9 @@ const SignInPopup = ({ setAsGuest , currentUser}) => {
     )
 }
 
-
 const mapStateToProps = ({ user }) => ({
-    currentUser: user.currentUser
+    currentUser: user.currentUser,
+    isGuest: user.isGuest
 
 })
 

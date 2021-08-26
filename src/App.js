@@ -16,7 +16,7 @@ import SignInPopup from './components/sign-in-popup/sign-in-popup';
 class App extends React.Component {
   constructor(props){
     super(props)
-    const { setCurrentUser, setAsGuest } = this.props
+    const { setCurrentUser, setAsGuest  } = this.props
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
       if (userAuth) {
         const userRef = await createUserProfileDocument(userAuth);
@@ -28,7 +28,7 @@ class App extends React.Component {
             }
           })  
         })
-      
+        setAsGuest()
       } else {
         console.log("hello")
         setCurrentUser(userAuth)
@@ -38,24 +38,19 @@ class App extends React.Component {
   
   unsubscribeFromAuth = null
 
-  componentDidMount() {
-
-    
-  }
-
   componentWillUnmount() {
     this.unsubscribeFromAuth()
-    setAsGuest()
   }
 
 
   render() {
     return (
-      <div >
+      <div className="win">
         {
-        this.props.isGuest ? (<Redirect to="/" />) : <SignInPopup />
-        }
+      
+          this.props.isGuest ? (<Redirect to="/" />) : <SignInPopup />
         
+        }  
         <Header />
         <Switch>
           <Route path="/" exact>
@@ -72,7 +67,6 @@ class App extends React.Component {
 
         </Switch>
         <Footer />
-
       </div>
     );
   }
@@ -82,10 +76,11 @@ const mapStateToProps = ({user})=>({
   currentUser: user.currentUser,
   isGuest: user.isGuest
 })
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = dispatch => {
+  return{
 setCurrentUser: (user) => dispatch(setCurrentUser(user)),
 setAsGuest: () => dispatch(setAsGuest())
 
-})
+}}
 
 export default connect( mapStateToProps, mapDispatchToProps )(App);
