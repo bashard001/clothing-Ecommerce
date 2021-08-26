@@ -5,7 +5,7 @@ import { setAsGuest } from "../../redux/user/user.actions"
 import { connect } from "react-redux"
 import { Link } from "react-router-dom"
 
-const SignInPopup = ({ setAsGuest, currentUser }) => {
+const SignInPopup = ({ setAsGuest, currentUser, popup }) => {
 
 
     useEffect(() => {
@@ -27,7 +27,7 @@ const SignInPopup = ({ setAsGuest, currentUser }) => {
     return (
         <div className="popup">
             <div className="popupCard">
-                <SignIn />
+                <SignIn popup={popup}/>
                 <div className="btnGroup">
                     <div className="guest">Continue as a <p style={{ display: "inline", cursor: "pointer", textDecoration: "underline" }} onClick={() => setAsGuest()}>Guest</p> </div>
                     <Link onClick={() => setAsGuest()} to="/signin"><div className="createBtn">Create an account</div></Link>

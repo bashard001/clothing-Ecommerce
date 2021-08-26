@@ -48,7 +48,7 @@ class App extends React.Component {
       <div>
         {
       
-          this.props.isGuest ? "" : <SignInPopup />
+          this.props.isGuest ? "" : <SignInPopup popup="popup"/>
         
         }  
         <Header />
