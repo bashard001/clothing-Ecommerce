@@ -19,6 +19,16 @@ border-radius: 10px;
 }
 
 .guest {
-  display: block;
   margin-top: 15px;
+  
+}
+.createBtn{
+  margin-top: 15px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.btnGroup{
+  display: flex;
+  justify-content: space-between;
+
 }
