@@ -31,7 +31,7 @@ const SignInPopup = ({ setAsGuest, isUser, currentUser }) => {
             <div className="popupCard">
                 <SignIn />
                 <div className="btnGroup">
-                    <div className="guest">continue as a <p style={{ display: "inline", cursor: "pointer" , textDecoration: "underline"}} onClick={() => setAsGuest()}>Guest</p> </div>
+                    <div className="guest">Continue as a <p style={{ display: "inline", cursor: "pointer" , textDecoration: "underline"}} onClick={() => setAsGuest()}>Guest</p> </div>
                    <Link onClick={() => setAsGuest() } to="/signin"><div className="createBtn">Create an account</div></Link> 
                 </div>
             </div>
