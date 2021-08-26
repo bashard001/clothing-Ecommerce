@@ -14,8 +14,9 @@ import SignInPopup from './components/sign-in-popup/sign-in-popup';
 
 
 class App extends React.Component {
-  constructor(props){
-    super(props)
+
+  unsubscribeFromAuth = null
+  componentDidMount(){
     const { setCurrentUser, setAsGuest  } = this.props
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
       if (userAuth) {
@@ -30,13 +31,12 @@ class App extends React.Component {
         })
         setAsGuest()
       } else {
-        console.log("hello")
-        setCurrentUser(userAuth)
+        
+        console.log(userAuth)
       }
     })
+    console.log("mounted")
   }
-  
-  unsubscribeFromAuth = null
 
   componentWillUnmount() {
     this.unsubscribeFromAuth()
@@ -45,7 +45,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="win">
+      <div>
         {
       
           this.props.isGuest ? "" : <SignInPopup />
