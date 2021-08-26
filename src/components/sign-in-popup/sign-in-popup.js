@@ -11,7 +11,7 @@ const SignInPopup = ({ setAsGuest, isUser, currentUser }) => {
         console.log(isUser)
         // props.setAsGuest()
 
-        if (currentUser && document.querySelector(".popup") !== null) {
+        if (currentUser && document.querySelector(".popup")) {
             console.log("account login")
             document.querySelector(".popup").style.display = "none"
         } else {
