@@ -17,6 +17,7 @@ const MenuItem = ({ title, imageUrl, size, linkUrl, history, match, bg }) => {
         default:
             break;
     }
+    
     return (
         <div className={`menu-item ${size}`}
             onClick={() => history.push(`${match.url}${linkUrl}`)}>

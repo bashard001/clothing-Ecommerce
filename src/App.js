@@ -16,8 +16,8 @@ import SignInPopup from './components/sign-in-popup/sign-in-popup';
 class App extends React.Component {
 
   unsubscribeFromAuth = null
+
   componentDidMount(){
-    
     const { setCurrentUser, setAsGuest  } = this.props
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
       if (userAuth) {
@@ -40,7 +40,6 @@ class App extends React.Component {
   componentWillUnmount() {
     this.unsubscribeFromAuth()
   }
-
 
   render() {
     return (

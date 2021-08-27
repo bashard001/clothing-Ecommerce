@@ -29,7 +29,6 @@ const SignIn = (props) => {
        setState({...state, [name]: value })
     }
 
-   
         return (
             <div className="sign-in">
                 <h2>Already have an account</h2>
