@@ -17,6 +17,7 @@ class App extends React.Component {
 
   unsubscribeFromAuth = null
   componentDidMount(){
+    
     const { setCurrentUser, setAsGuest  } = this.props
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
       if (userAuth) {
@@ -31,11 +32,9 @@ class App extends React.Component {
         })
         setAsGuest()
       } else {
-        
-        console.log(userAuth)
+        setCurrentUser(userAuth)
       }
     })
-    console.log("mounted")
   }
 
   componentWillUnmount() {
@@ -47,9 +46,7 @@ class App extends React.Component {
     return (
       <div>
         {
-      
           this.props.isGuest ? "" : <SignInPopup popup="popup"/>
-        
         }  
         <Header />
         <Switch>
