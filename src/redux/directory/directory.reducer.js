@@ -17,6 +17,14 @@ const INITIAL_STATE =
       id: 5,
       linkUrl: 'shop/mens'
     },
+    
+    {
+      title: 'Shoes',
+      imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
+      id: 3,
+      linkUrl: 'shop/sneakers',
+      bg: "sneaker"
+    },
     {
       title: 'hats',
       imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
@@ -25,17 +33,10 @@ const INITIAL_STATE =
       bg: 'cap',
     },
     {
-      title: 'jackets',
+      title: 'Tops',
       imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
       id: 2,
       linkUrl: 'shop/jackets'
-    },
-    {
-      title: 'sneakers',
-      imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
-      id: 3,
-      linkUrl: 'shop/sneakers',
-      bg: "sneaker"
     }
   ]}
 
