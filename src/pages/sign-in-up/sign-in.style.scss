@@ -1,13 +1,41 @@
 .sign-in-and-sign-up {
-  width: 850px;
+  width: 60%;
   display: flex;
   justify-content: space-between;
   margin: 50px auto;
-  height: 70vh;
+  min-height: 70vh;
 
   .line {
     border-left: solid #e50051;
     border-width: 2px;
-    height: 85%;
+   
+    display: flex;
   }
+}
+
+@media (max-width: 840px) {
+  .sign-in-and-sign-up {
+    align-items: center;
+    flex-direction: column;
+
+    .line{
+      display: inline;
+      height: auto;
+      width: 100px;
+    }
+  
+  }
+
+}
+@media (max-width: 1360px) {
+  .sign-in-and-sign-up{
+    width: 80%;
+  }
+  
+}
+@media (max-width: 1100px) {
+  .sign-in-and-sign-up{
+    width: 90%;
+  }
+  
 }

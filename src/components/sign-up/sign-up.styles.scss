@@ -8,3 +8,17 @@
       margin: 10px 0;
     }
   }
+  @media (max-width: 840px) {
+    .sign-up{
+      margin-top: 60px;
+      width: 350px;
+    }
+    
+  }
+  @media (max-width: 1360px) {
+    .sign-up{
+    
+      width: 330px;
+    }
+    
+  }
