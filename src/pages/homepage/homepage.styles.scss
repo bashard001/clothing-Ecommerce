@@ -29,3 +29,16 @@
     margin-left: 7.5px;
   }
 }
+
+@media (max-width: 600px) {
+  .homepage {
+   
+    padding: 25px 35px;
+  }
+}
+
+@media (max-width: 400px) {
+  .menu-item{
+    width: 50%;
+  }
+}

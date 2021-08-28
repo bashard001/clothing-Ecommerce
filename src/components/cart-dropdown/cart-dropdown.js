@@ -12,9 +12,9 @@ import { toggleCartHidden } from "../../redux/cart/cart.actions";
 
 import "./cart-dropdown.scss"
 
-const CartDropdown = ({ cartItems, history, toggleCartHidden}) => (
+const CartDropdown = ({ cartItems, history, toggleCartHidden }) => (
     <div className="dropShade" onClick={toggleCartHidden}>
-        <div className="cart-dropdown" onClick={(e)=>{
+        <div className="cart-dropdown" onClick={(e) => {
             e.stopPropagation()
         }}>
             <div className="cart-items">
@@ -27,10 +27,10 @@ const CartDropdown = ({ cartItems, history, toggleCartHidden}) => (
             <CustomButton onClick={() => {
                 history.push("/checkout")
                 toggleCartHidden();
-                
+
             }}>GO TO CHECKOUT</CustomButton>
         </div>
-        </div>
+    </div>
 )
 const mapDispatchToProps = dispatch => ({
     toggleCartHidden: () => dispatch(toggleCartHidden())
