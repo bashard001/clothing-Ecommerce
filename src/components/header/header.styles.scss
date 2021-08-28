@@ -35,3 +35,20 @@
     }
   }
 }
+@media (max-width: 444px) {
+  .header {
+    padding: 10px 0px;
+
+    .logo-container {
+      height: 100%;
+      width: 70px;
+      margin-left: 10px;
+    }
+    .options {
+      padding-top: 13px;
+      .option {
+        padding: 10px 8px;
+      }
+    }
+  }
+}
