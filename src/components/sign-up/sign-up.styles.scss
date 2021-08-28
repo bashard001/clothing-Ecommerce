@@ -7,18 +7,22 @@
     .title {
       margin: 10px 0;
     }
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+  }
   }
   @media (max-width: 840px) {
     .sign-up{
       margin-top: 60px;
-      width: 350px;
+     
     }
     
   }
   @media (max-width: 1360px) {
     .sign-up{
     
-      width: 330px;
+      width: 350px;
     }
     
   }

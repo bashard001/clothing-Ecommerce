@@ -3,7 +3,7 @@ import React from "react"
 import FormInput from "../form-input/form-input"
 import CustomButton from "../custom-button/custom-button.component"
 
-import { auth, createUserProfileDocument } from "../../firebase/firebase.utils"
+import { auth, createUserProfileDocument, signInWithGoogle} from "../../firebase/firebase.utils"
 import "./sign-up.styles.scss"
 
 class SignUp extends React.Component {
@@ -91,7 +91,10 @@ class SignUp extends React.Component {
                         required
                         label="Confirm Password"
                     />
+                    <div className="buttons">
                     <CustomButton type="submit">Sign Up</CustomButton>
+                    <CustomButton onClick={signInWithGoogle} isGoogleSignIn> SIGN UP WITH GOOGLE
+                        </CustomButton></div>
                 </form>
             </div>
         )
