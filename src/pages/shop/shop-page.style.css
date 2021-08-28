@@ -1,3 +1,9 @@
 .shop-page {
     padding: 0px 45px 0px;
 }
+
+@media (min-width: 1400px) {
+    .shop-page{
+        padding: 0px 110px ;
+    }
+}

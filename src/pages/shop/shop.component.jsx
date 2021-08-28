@@ -7,14 +7,14 @@ import "./shop-page.style.css"
 
 
 
-const ShopPage =  ({ match }) => {
-    
-        
-        return (<div className="shop-page">
-           <Route exact path={`${match.path}`} component={ CollectionOverview }/>
-           <Route path={`${match.path}/:categoryId`} component={CollectionPage} />
-        </div>)
-    }
+const ShopPage = ({ match }) => {
+
+
+    return (<div className="shop-page">
+        <Route exact path={`${match.path}`} component={CollectionOverview} />
+        <Route path={`${match.path}/:categoryId`} component={CollectionPage} />
+    </div>)
+}
 
 
 export default ShopPage
