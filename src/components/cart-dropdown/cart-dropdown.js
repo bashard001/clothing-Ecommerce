@@ -12,7 +12,17 @@ import { toggleCartHidden } from "../../redux/cart/cart.actions";
 
 import "./cart-dropdown.scss"
 
-const CartDropdown = ({ cartItems, history, toggleCartHidden }) => (
+const CartDropdown = ({ cartItems, history, toggleCartHidden }) => {
+
+    function toTopFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    
+
+
+
+return (
     <div className="dropShade" onClick={toggleCartHidden}>
         <div className="cart-dropdown" onClick={(e) => {
             e.stopPropagation()
@@ -27,11 +37,13 @@ const CartDropdown = ({ cartItems, history, toggleCartHidden }) => (
             <CustomButton onClick={() => {
                 history.push("/checkout")
                 toggleCartHidden();
+                toTopFunction()
 
             }}>GO TO CHECKOUT</CustomButton>
         </div>
     </div>
-)
+)}
+
 const mapDispatchToProps = dispatch => ({
     toggleCartHidden: () => dispatch(toggleCartHidden())
 })

@@ -3,13 +3,12 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding:15px;
+ align-items: center;
   z-index: 100;
-  vertical-align: middle;
   border-bottom: 0.8px solid rgb(165, 165, 165);
   top: 0;
   background-color: white;
-  height: 10vh;
+  min-height: 10vh;
 
   .logo-container {
     height: 100%;

@@ -4,8 +4,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: auto ;
-    padding-top: 4vh;
+    margin: 50px  auto;
+  
   
     .checkout-header {
       width: 100%;
@@ -16,14 +16,15 @@
   
       .header-block {
         text-transform: capitalize;
-        width: 23%;
-  
+        display: flex;
         &:last-child {
           width: 8%;
         }
+        span{
+          margin-left: auto;
+        }
       }
     }
-  
     .total {
       margin-top: 30px;
       margin-left: auto;
@@ -33,6 +34,8 @@
 
   @media (max-width: 1180px) {
     .checkout-page{
+      width: 70%;
+      margin: 40px  auto;
       .total{
         font-size: 22px;
       }
@@ -41,6 +44,12 @@
   @media (max-width: 666px) {
     .checkout-page{
       width: 80%;
+      .header-block{
+        font-size: 16px;
+      }
+      .total{
+        font-size: 18px;
+      }
     }
     
   }

@@ -3,12 +3,12 @@
     display: flex;
     min-height: 100px;
     border-bottom: 1px solid darkgrey;
-    padding: 15px 0;
-    font-size: 20px;
+    padding: 10px 0;
+    font-size: 19px;
     align-items: center;
   
     .image-container {
-      width: 23%;
+      width: 24%;
       padding-right: 15px;
   
       img {
@@ -19,7 +19,7 @@
     .name,
     .quantity,
     .price {
-      width: 23%;
+      width: 24%;
     }
   
     .quantity {
@@ -35,6 +35,11 @@
     .remove-button {
       padding-left: 12px;
       cursor: pointer;
+    }
+  }
+  @media (max-width: 750px) {
+    .checkout-item{
+      font-size: 18px;
     }
   }
   
