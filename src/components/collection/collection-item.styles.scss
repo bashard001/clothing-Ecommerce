@@ -1,5 +1,5 @@
 .collection-item {
-  min-width: 250px;
+
   display: flex;
   flex-direction: column;
   height: 350px;
@@ -49,5 +49,10 @@
     .price {
       width: 10%;
     }
+  }
+}
+@media (min-width: 1550px) {
+  .collection-item{
+    min-width: 290px;
   }
 }

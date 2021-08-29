@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 25px 110px;
+  padding: 25px 150px;
 }
 
 .directory-menu {
@@ -30,7 +30,14 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (min-width: 1440px) {
+  .homepage {
+   
+    padding: 25px 265px;
+  }
+}
+
+@media (max-width: 1000px) {
   .homepage {
    
     padding: 25px 35px;
