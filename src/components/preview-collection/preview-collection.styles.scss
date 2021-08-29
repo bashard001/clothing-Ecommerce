@@ -39,3 +39,10 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #b30000; 
 }
+@media (max-width: 555px) {
+  .collection-preview{
+    .title{
+      margin-left: 25px;
+    }
+  }
+}

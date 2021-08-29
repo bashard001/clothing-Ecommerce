@@ -7,3 +7,8 @@
         padding: 0px 110px ;
     }
 }
+@media (max-width: 555px) {
+    .shop-page{
+        padding: 0px 0px ;
+    }
+}
