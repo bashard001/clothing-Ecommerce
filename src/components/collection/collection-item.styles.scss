@@ -1,5 +1,5 @@
 .collection-item {
-
+  min-width: 230px;
   display: flex;
   flex-direction: column;
   height: 350px;
@@ -52,6 +52,11 @@
   }
 }
 @media (min-width: 1550px) {
+  .collection-item{
+    min-width: 290px;
+  }
+}
+@media (min-width: 666px) {
   .collection-item{
     min-width: 290px;
   }
