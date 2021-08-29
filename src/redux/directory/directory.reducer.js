@@ -1,14 +1,8 @@
 const INITIAL_STATE =
-{ sections: [
-  
-    {
-      title: 'womens',
-      bg: "women",
-      imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
-      size: 'large',
-      id: 4,
-      linkUrl: 'shop/womens'
-    },
+{
+  sections: [
+
+
     {
       title: 'mens',
       bg: "men",
@@ -17,7 +11,15 @@ const INITIAL_STATE =
       id: 5,
       linkUrl: 'shop/mens'
     },
-    
+     {
+      title: 'womens',
+      bg: "women",
+      imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
+      size: 'large',
+      id: 4,
+      linkUrl: 'shop/womens'
+    },
+
     {
       title: 'Shoes',
       imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
@@ -38,14 +40,15 @@ const INITIAL_STATE =
       id: 2,
       linkUrl: 'shop/jackets'
     }
-  ]}
+  ]
+}
 
-  const directoryReducer = (state = INITIAL_STATE, action) => {
-      switch (action.type) {
-        
-          default:
-              return state;
-      }
+const directoryReducer = (state = INITIAL_STATE, action) => {
+  switch (action.type) {
+
+    default:
+      return state;
   }
+}
 
-  export default directoryReducer
+export default directoryReducer
