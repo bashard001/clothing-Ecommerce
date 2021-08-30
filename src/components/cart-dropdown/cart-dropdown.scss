@@ -4,13 +4,15 @@
     height: 340px;
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 19px 15px;
     border: 1px solid black;
     background-color: white;
     top: 8%;
     right: 3%;
     z-index: 10;
     border-radius: 20px;
+    
+    
 
     .empty-message {
       font-size: 18px;
@@ -21,7 +23,15 @@
       height: 240px;
       display: flex;
       flex-direction: column;
-      overflow: hidden;
+      overflow-y: scroll;
+    }
+    .cart-items::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px grey; 
+      border-radius: 10px;
+
+    }
+    .cart-items::-webkit-scrollbar {
+      width: 5px;
     }
   
     button {
