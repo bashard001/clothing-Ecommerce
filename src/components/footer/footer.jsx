@@ -6,8 +6,10 @@ import "./footer.styles.scss"
 const Footer = ()=>{
     return(
 <div className="footer">
-    <p>FLAMINGO</p>
-   
+<p className="author">Site built by: <br/>
+   Bashar Daseh </p>
+    <p className="title">FLAMINGO</p>
+  
   
 
 </div>)
