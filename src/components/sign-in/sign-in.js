@@ -23,6 +23,7 @@ const SignIn = (props) => {
             console.log(error)
             let el = document.createElement("p")
             el.textContent = error.code
+            el.className += "warning"
             document.querySelector(".sign-in").appendChild(el)
         }
     }
