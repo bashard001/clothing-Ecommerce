@@ -21,6 +21,9 @@ const SignIn = (props) => {
         })
         } catch (error) {
             console.log(error)
+            let el = document.createElement("p")
+            el.textContent = error.code
+            document.querySelector(".sign-in").appendChild(el)
         }
     }
   
