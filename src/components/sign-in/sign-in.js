@@ -41,13 +41,13 @@ const SignIn = (props) => {
                         id={`${props.popup}signinEmail`}
                         value={state.email}
                         handleChange={handleChange}
-                        label="email" required />
+                        label="Email" required />
 
                     <FormInput name="password"
                     id={`${props.popup}signinPassword`}
                         type="password" handleChange={handleChange}
                         value={state.password}
-                        label="password" required />
+                        label="Password" required />
                     <div className="buttons">
                         <CustomButton type="submit"> SIGN IN
                         </CustomButton>
