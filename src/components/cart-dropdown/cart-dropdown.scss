@@ -1,50 +1,45 @@
 .cart-dropdown {
-    position: absolute;
-    width: 240px;
-    height: 340px;
+  position: absolute;
+  width: 240px;
+  height: 340px;
+  display: flex;
+  flex-direction: column;
+  padding: 19px 15px;
+  border: 1px solid black;
+  background-color: white;
+  top: 8%;
+  right: 3%;
+  z-index: 10;
+  border-radius: 20px;
+
+  .empty-message {
+    font-size: 18px;
+    margin: 50px auto;
+  }
+
+  .cart-items {
+    height: 240px;
     display: flex;
     flex-direction: column;
-    padding: 19px 15px;
-    border: 1px solid black;
-    background-color: white;
-    top: 8%;
-    right: 3%;
-    z-index: 10;
-    border-radius: 20px;
-    
-    
-
-    .empty-message {
-      font-size: 18px;
-      margin: 50px auto;
-    }
-  
-    .cart-items {
-      height: 240px;
-      display: flex;
-      flex-direction: column;
-      overflow-y: scroll;
-    }
-    .cart-items::-webkit-scrollbar-track {
-      box-shadow: inset 0 0 5px grey; 
-      border-radius: 10px;
-
-    }
-    .cart-items::-webkit-scrollbar {
-      width: 5px;
-    }
-  
-    button {
-      margin-top: auto;
-    }
+    overflow-y: scroll;
   }
-  .dropShade{
-    position: absolute;
-    z-index: 111;
-   width: 100%;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    
+  .cart-items::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
   }
-  
+  .cart-items::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  button {
+    margin-top: auto;
+  }
+}
+.dropShade {
+  position: absolute;
+  z-index: 111;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
