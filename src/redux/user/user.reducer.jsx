@@ -22,7 +22,6 @@ const userReducer = (state = INITIAL_STATE, action) => {
             return {
                 ...state,
                 modalShow: action.payload
-
             }
 
         default:
