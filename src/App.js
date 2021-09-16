@@ -35,6 +35,7 @@ class App extends React.Component {
         setCurrentUser(userAuth)
       }
     })
+
   }
 
   componentWillUnmount() {
@@ -42,10 +43,11 @@ class App extends React.Component {
   }
 
   render() {
+    
     return (
       <div>
         {
-          this.props.isGuest ? "" : <SignInPopup show={this.props.modalShow}/>
+          this.props.isGuest ? "" : <SignInPopup show={this.props.modalShow} />
         }  
         <Header />
         <Switch>
@@ -77,7 +79,7 @@ const mapDispatchToProps = dispatch => {
   return{
 setCurrentUser: (user) => dispatch(setCurrentUser(user)),
 setAsGuest: () => dispatch(setAsGuest()),
-setModalState: () => dispatch(setModalState())
+setModalState: (modal) => dispatch(setModalState(modal))
 
 }}
 
