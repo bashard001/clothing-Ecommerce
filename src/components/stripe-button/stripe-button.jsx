@@ -6,12 +6,11 @@ const StripeCheckoutButton = ({price}) => {
     const priceForStripe = price * 100;
     const publishableKey = "pk_test_51JTvhZFQ1c8yUIdAseqii4KRK18U95pziwArSyk0Tm255X6Kr4YvcQGt9RVnzlXBtdnQUGa29YTIQmTGO52LFPRx00pxtEujOT"
 
-
-
     const onToken = token => {
         console.log(token)
         alert("payment successful")
     }
+
     return(
         <StripeCheckout 
         label ="Pay Now"
