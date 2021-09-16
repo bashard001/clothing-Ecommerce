@@ -5,17 +5,16 @@ import { setAsGuest, setModalState } from "../../redux/user/user.actions"
 import { connect } from "react-redux"
 import { Link } from "react-router-dom"
 
-const SignInPopup = ({ setAsGuest, currentUser, setModalState, show}) => {
+const SignInPopup = ({ setAsGuest, currentUser, setModalState, show }) => {
 
-    
-  
+
     useEffect(() => {
 
         function timeFunc() {
 
             if (currentUser) {
                 console.log("account login")
-               
+
                 setModalState(false)
             } else {
                 setTimeout(() => {
@@ -26,9 +25,11 @@ const SignInPopup = ({ setAsGuest, currentUser, setModalState, show}) => {
 
         timeFunc()
     }, [currentUser])
- if (!show) {
+
+    if (!show) {
         return null
     }
+
     return (
         <div className="popup">
             <div className="popupCard">
