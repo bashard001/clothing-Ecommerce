@@ -45,7 +45,7 @@ class App extends React.Component {
     return (
       <div>
         {
-          this.props.isGuest ? "" : <SignInPopup popup="popup"/>
+          this.props.isGuest ? "" : <SignInPopup show={this.props.modalShow} popup="popup"/>
         }  
         <Header />
         <Switch>

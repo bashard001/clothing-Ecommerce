@@ -9,9 +9,9 @@ export const setAsGuest = () => (
         type: UserActionTypes.SET_AS_GUEST
     }
 )
-export const setModalState = () => (
+export const setModalState = (modal) => (
     {
         type: UserActionTypes.Modal_Control,
-        payload
+        payload: modal
     }
 )

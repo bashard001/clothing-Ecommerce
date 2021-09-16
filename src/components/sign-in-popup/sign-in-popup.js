@@ -1,21 +1,21 @@
 import React, { useEffect } from "react"
 import "./sign-in-popup.styles.scss"
 import SignIn from "../sign-in/sign-in"
-import { setAsGuest } from "../../redux/user/user.actions"
+import { setAsGuest, setModalState } from "../../redux/user/user.actions"
 import { connect } from "react-redux"
 import { Link } from "react-router-dom"
 
-const SignInPopup = ({ setAsGuest, currentUser, popup, modalShow }) => {
+const SignInPopup = ({ setAsGuest, currentUser, popup, setModalState }) => {
 
     useEffect(() => {
         function timeFunc() {
 
             if (currentUser && document.querySelector(".popup")) {
                 console.log("account login")
-                document.querySelector(".popup").style.display = "none"
+                setModalState(false)
             } else {
                 setTimeout(() => {
-                    document.querySelector(".popup").style.display = "flex"
+                    setModalState(true)
                 }, 3000)
             }
         }
@@ -26,7 +26,7 @@ const SignInPopup = ({ setAsGuest, currentUser, popup, modalShow }) => {
     return (
         <div className="popup">
             <div className="popupCard">
-                <SignIn popup={popup}/>
+                <SignIn popup={popup} />
                 <div className="btnGroup">
                     <div className="guest">Continue as a <p style={{ display: "inline", cursor: "pointer", textDecoration: "underline" }} onClick={() => setAsGuest()}>Guest</p> </div>
                     <Link onClick={() => setAsGuest()} to="/signin"><div className="createBtn">Create an account</div></Link>
@@ -39,12 +39,12 @@ const SignInPopup = ({ setAsGuest, currentUser, popup, modalShow }) => {
 const mapStateToProps = ({ user }) => ({
     currentUser: user.currentUser,
     isGuest: user.isGuest
-
 })
 
 const mapDispatchToProps = dispatch => {
     return {
-        setAsGuest: () => dispatch(setAsGuest())
+        setAsGuest: () => dispatch(setAsGuest()),
+        setModalState: (modal) => dispatch(setModalState(modal))
     }
 }
 
