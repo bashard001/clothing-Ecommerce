@@ -5,7 +5,7 @@ import { setAsGuest } from "../../redux/user/user.actions"
 import { connect } from "react-redux"
 import { Link } from "react-router-dom"
 
-const SignInPopup = ({ setAsGuest, currentUser, popup }) => {
+const SignInPopup = ({ setAsGuest, currentUser, popup, modalShow }) => {
 
     useEffect(() => {
         function timeFunc() {
