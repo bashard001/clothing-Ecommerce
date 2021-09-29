@@ -12,6 +12,9 @@ import { toggleCartHidden } from "../../redux/cart/cart.actions";
 
 import "./cart-dropdown.scss"
 
+
+
+
 const CartDropdown = ({ cartItems, history, toggleCartHidden }) => {
 
     function toTopFunction() {
