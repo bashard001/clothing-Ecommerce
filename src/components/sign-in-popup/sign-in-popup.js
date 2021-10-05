@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useRef } from "react"
 import "./sign-in-popup.styles.scss"
 import SignIn from "../sign-in/sign-in"
 import { setAsGuest, setModalState } from "../../redux/user/user.actions"
@@ -7,18 +7,20 @@ import { Link } from "react-router-dom"
 
 const SignInPopup = ({ setAsGuest, currentUser, setModalState, show }) => {
 
+let modal = useRef()
 
+modal.current = setModalState
     useEffect(() => {
-
+console.log(modal.current)
         function timeFunc() {
 
             if (currentUser) {
                 console.log("account login")
 
-                setModalState(false)
+                modal.current(false)
             } else {
                 setTimeout(() => {
-                    setModalState(true)
+                    modal.current(true)
                 }, 3000)
             }
         }
